@@ -22,7 +22,7 @@ const mailerCron = () => {
                     console.log(err);
                 } else {
                     console.log(data);
-                    const savedNotification = await Ticket.findOne({_id: notififcation._id});
+                    const savedNotification = await Ticket.findOne({_id: notification._id});
                     savedNotification.status = "SUCCESS";
                     await savedNotification.save();
                 }
