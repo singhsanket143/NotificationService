@@ -15,6 +15,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 ticketRoutes(app);
 
+app.get('/', (req, res) => {
+    res.send('Home page for noti service');
+})
+
 app.listen(process.env.PORT, async () => {
     console.log('Notification server started');
     // sendMail(process.env.EMAIL, process.env.EMAIL_PASS);
